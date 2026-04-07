@@ -9,11 +9,17 @@ body {
   max-width: 375px;
   height: 100vh;
   margin: 0 auto;
-  background: #f1f1f1;
+  background: #eeeeee;
+
   display: flex;
+}
+
+.container.bottom {
   align-items: flex-end;
-  border: 1px solid #d0d0d0;
-  overflow: hidden;
+}
+
+.container.top {
+  align-items: flex-start;
 }
 
 .content {
