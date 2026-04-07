@@ -6,11 +6,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-  const isPasswordValid = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password);
-
-  const isActive = isEmailValid && isPasswordValid;
+  const isActive = email.trim() !== "" && password.trim() !== "";
 
   return (
     <div className="container top">
@@ -30,9 +26,6 @@ function Login() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          {!isEmailValid && email && (
-            <span className="error">Enter a valid email</span>
-          )}
         </div>
 
         <div className="input-group">
@@ -43,11 +36,6 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          {!isPasswordValid && password && (
-            <span className="error">
-              Min 8 chars, 1 uppercase, 1 number, 1 special char
-            </span>
-          )}
         </div>
 
         <button

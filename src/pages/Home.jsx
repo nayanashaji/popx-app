@@ -12,7 +12,7 @@ function Home() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
 
-            <button className="primary-btn">
+            <button className="primary-btn" onClick={() => navigate("/signup")}>
             Create Account
             </button>
 
