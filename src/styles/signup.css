@@ -99,12 +99,12 @@
   display: block;     
 }
 
-.primary-btn.active {
+.signup-primary-btn.active {
   background: linear-gradient(90deg, #6a11cb, #7b2ff7);
   cursor: pointer;
 }
 
-.primary-btn.active:hover {
+.signup-primary-btn.active:hover {
   opacity: 0.9;
 }
 

@@ -1,7 +1,10 @@
 import "../styles/login.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,7 +43,7 @@ function Login() {
 
         <button
           className={`login-btn ${isActive ? "active" : ""}`}
-          disabled={!isActive}
+          disabled={!isActive} onClick={() =>navigate("/account")}
         >
           Login
         </button>
